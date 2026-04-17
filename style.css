@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 100px 10%; 
+    align-items: center; 
+}
+
+/* La clase "invertido" hace que los elementos dentro del contenedor
+   se pongan en orden contrario al que aparecen en el HTML.
+   Asi en desktop uLesson muestra: imagen izquierda, texto derecha */
+.invertido {
+    flex-direction: row-reverse;
+}
+
+/*El motivo de los nombres de columna 100 y tal es para la organizacion sobre el porcentaje que tiene que ocupar cada apartado en pantalla*/
+.columna-100 {
+     width: 100%;
+ }
+
+ .columna-50  { 
+    width: 50%; 
+    padding: 40px; 
+}
+
+.columna-25  { 
+    width: 25%; 
+    padding: 20px; 
+    font-size: 14px; 
+    line-height: 1.8; 
+} 
+
+/*Aqui el nombre de la variable hace referencia al texto y asi se a lo que me puedo referir de manera mas rapida*/
+.fondo-sleepiest { 
+    background-color: #f9f4f7; 
+} 
+
+.fondo-ulesson   { 
+    background-color: #f9f7f5; 
+} 
+
+.fondo-genesis   { 
+    background-color: #f2f6f9; 
+} 
+
+.fondo-negro { 
+    background-color: #000000;
+    color: #ffffff; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+img {
+    width: 100%;      
+    height: auto;
+    border-radius: 20px; 
+}
+
+.subtitulo { 
+    font-weight: bold; 
+    font-size: 18px; 
+    margin-bottom: 15px; 
+}
+
+.titulo-grande { 
+    font-size: 60px; 
+    color: #007d82; 
+    font-weight: 600; 
+    line-height: 1.1; 
+}
+
+.nombre-app { 
+    font-size: 24px; 
+    font-weight: 500; 
+    margin-bottom: 20px;
+}
+
+.frase-app { 
+    font-size: 40px; 
+    color: #666; 
+    margin-bottom: 20px; 
+    line-height: 1.2; 
+}
+
+.tags { 
+    color: #aaa;
+    text-transform: uppercase; 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+    font-weight: bold; 
+}
+
+.titulo-footer { 
+    font-size: 35px;
+    margin-bottom: 40px; 
+    border-bottom: 1px solid #333; 
+    padding-bottom: 20px; 
+}
+
+@media (max-width: 768px) {
+
+    .contenedor-principal {
+        flex-direction: column; 
+        padding: 40px 5%;     
+        align-items: flex-start; 
+    }
+
+    /* En movil la clase invertido no tiene efecto porque ya todo va en columna */
+    .invertido {
+        flex-direction: column;
+    }
+
+    .columna-50, 
+    .columna-25, 
+    .columna-100 {
+        width: 100%;
+        padding: 20px 0; 
+    }
+
+    .titulo-grande {
+        font-size: 35px; 
+    }
+
+    .frase-app {
+        font-size: 26px;
+    }
+
+    .fondo-negro {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /*Alberto en css tu puedes meter dos clases en una misma regla eso se hace en caso de que tu 
+    quieras que copie unas reglas de una clase pero aparte le quieres poner las mismas especificas para ella por ejemplo en mi html podemos ver que fondo negro
+    y columna 25 no pertenecena la misma linea peroe le hacemos referencia a los dos (repito todo esto se que no se ha dado en clase lo he trabajado
+    yo como bien sabeis ya aprte a nivel personal para mi organizacion me va muchisimo mejor)*/
+    .fondo-negro .columna-25 {
+        width: 50%; 
+    }
+    
+    .fondo-negro .columna-100 {
+        width: 100%; 
+    }
+}
