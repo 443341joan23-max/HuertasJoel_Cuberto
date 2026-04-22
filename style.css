@@ -113,7 +113,7 @@ img {
         align-items: flex-start; 
     }
 
-    /* En movil la clase invertido no tiene efecto porque ya todo va en columna */
+    
     .invertido {
         flex-direction: column;
     }
